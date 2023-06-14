@@ -1,0 +1,226 @@
+Curso Git IsCodeLand
+<!-- .............................................. -->
+
+Configuración de Git (Comandos)
+      
+git --version
+De esta manera sabremos si tenemos instalado GIT.
+
+
+git config --global user.name "ivan sala" 
+Esta opción sirve para que la configuracion que vamos a agregar ahora se efectue de manera global y no por proyecto.
+
+git status 
+muestra el status de git
+
+git config --global user.mail 
+Configuracion de email.
+
+
+git config --global core.editor "code --wait" 
+Con este comando podremos indicar que VSC sera nuestro editor.
+
+
+git config --global -e <br>
+Se abrira el archivo de configuracion global.
+
+
+git config --global core.autocrlf true 
+Configuracion para windows debe de ser true.
+Configuracion para MAC o LINUX debe de ser input.
+
+
+git config -h 
+Te mostrara todas las opciones de git.
+
+<!-- .............................................. -->
+
+git config -h
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry -->
+
+
+<!-- .............................................. -->
+
+Comandos de basicos de Bash
+
+ls + enter
+Permite listar todos los archivos y carpetas que estan dentro de un direcctorio.
+
+
+ls -a + enter 
+Permite mostar archivos ocultos. 
+
+
+pwd + enter
+indica donde te encuentras. 
+
+
+cd seguido de carpeta + enter ejemplo cd workspace
+ingresa a la carpeta es escogemos.
+
+
+cd .. + enter
+regresar y salir de carpeta 
+
+
+mkdir nombredecarpeta + enter 
+crea una carpeta nueva
+
+<!-- .............................................. -->
+
+Inicializando repositorio
+
+git init + enter
+crea un reporitorio .git esta oculto 
+
+<!-- .............................................. -->
+
+Agregando cambios a Stage
+
+git add <archivo> + enter 
+
+git rm --cached <archivo> + enter
+
+
+<!-- .............................................. -->
+
+Commit en git
+
+git init + enter 
+inicia un repositorio
+
+git commit -m + enter
+agrega un mensaje que hace sentido a lo que estes haciendo
+
+git commit + enter
+abre un archivo en VSC donde podras hacer el commit de otra manera
+
+<!-- .............................................. -->
+
+Eliminando archivos
+
+rm <archivo> + 
+enter elimina el archivo
+
+git rm <archivo> + enter
+
+<!-- .............................................. -->
+
+Volviendo del stage y descartando cambios
+
+git restore --staged <archivo> + enter
+es para sacar un cambio que esta en etapa de stage
+
+git restore <archivo> + enter
+restaura el cambio
+
+<!-- .............................................. -->
+
+Mover o renombrar archivos
+
+mv <archivo> <archivorenombrado> + enter
+sirve para renombrar un archivo
+
+git mv <archivo> <archivorenombrado> + enter
+cambia el nombre directamente en stage
+
+<!-- .............................................. -->
+
+Git status
+
+git status + enter
+muestra un status general de git
+
+git status -s
+muestra el status con letras que indican el cambio incluso de color si ya estan en etapa de stage
+
+<!-- .............................................. -->
+
+Visualizando los cambios
+
+git diff + enter
+muestra los cambios que hemos escrito que estan por pasar a stage
+
+git diff
+muestra los cambios que hemos escrito que ya estan en stage
+
+<!-- .............................................. -->
+
+Viendo el historial
+
+git log + enter
+informacion de la persona que realiza el cambio
+
+git log --oneline + enter
+informacion con identificador de commit
+
+<!-- .............................................. -->
+
+Ramas en Git o Branches
+
+git branch + enter
+muestra las ramas y la rama donde te encuentras
+
+git checkout -b <nombredelarama> + enter
+crea una rama
+
+git checkout <nombredelarama> + enter
+ingresar a rama
+
+git merge <nombredelarama> + enter
+git merge seguido del nombre de la rama a la cual queremos traer 
+
+
+<!-- .............................................. -->
+
+Conectando con HitHub
+git remote add origin ............ + enter
+es para subir nuestros cambios al reporsitorio remoto
+
+git push -u origin <nombredelarama> + enter
+sube al reporitorio la rama en la que te encuentras
+
+<!-- .............................................. -->
+<!-- .......................Fin....................... -->
